@@ -1,4 +1,5 @@
-import './globals.css'
+import Link from 'next/link';
+import './globals.css';
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +9,22 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <nav className="py-4 px-6 text-sm font-medium">
+          <ul className="flex space-x-3">
+            <Link className={`block px-3 py-2 rounded-md`} href="/">
+              홈
+            </Link>
+            <Link className={`block px-3 py-2 rounded-md`} href="/about">
+              About
+            </Link>
+            <Link className={`block px-3 py-2 rounded-md`} href="/blog">
+              Blog
+            </Link>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
