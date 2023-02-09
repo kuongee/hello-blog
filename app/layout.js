@@ -18,12 +18,9 @@ export default function RootLayout({ children }) {
             <Link className={`block px-3 py-2 rounded-md`} href="/about">
               About
             </Link>
-            <Link className={`block px-3 py-2 rounded-md`} href="/blog">
-              Blog
-            </Link>
           </ul>
         </nav>
-        {children}
+        <section className="py-4 px-6">{children}</section>
       </body>
     </html>
   );
