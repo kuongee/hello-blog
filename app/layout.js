@@ -9,18 +9,18 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className="bg-indigo-100">
         <nav className="py-4 px-6 text-sm font-medium">
           <ul className="flex space-x-3">
             <Link className={`block px-3 py-2 rounded-md`} href="/">
-              홈
+              BLOG
             </Link>
             <Link className={`block px-3 py-2 rounded-md`} href="/about">
-              About
+              ABOUT
             </Link>
           </ul>
         </nav>
-        <section className="py-4 px-6">{children}</section>
+        <section className="px-6 pt-6">{children}</section>
       </body>
     </html>
   );
