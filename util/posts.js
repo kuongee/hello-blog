@@ -7,6 +7,11 @@ import remarkGfm from 'remark-gfm';
 
 const postsDir = path.join(process.cwd(), '_posts');
 
+const getSlugs = () => {
+  const posts = fs.readdirSync(postsDir);
+  return posts;
+};
+
 const getAllPosts = () => {
   const posts = fs.readdirSync(postsDir);
   const getFiles = posts
@@ -38,4 +43,4 @@ const getPost = async fileName => {
   };
 };
 
-export { getAllPosts, getPost };
+export { getSlugs, getAllPosts, getPost };

@@ -1,6 +1,12 @@
 import BlogHeader from '@/components/BlogHeader';
 import BlogMarkdown from '@/components/BlogMarkdown';
-import { getPost } from '@/util/posts';
+import { getPost, getSlugs } from '@/util/posts';
+
+export async function generateStaticParams() {
+  return getSlugs().map(post => ({
+    slug: post.substring(0, post.lastIndexOf('.md')),
+  }));
+}
 
 const BlogPage = async ({ params }) => {
   const fileName = `${params.slug}.md`;
