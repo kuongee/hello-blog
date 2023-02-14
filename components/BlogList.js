@@ -13,7 +13,7 @@ const BlogList = () => {
             key={blog.fileName}
             href={`/blog/${blog.fileName}`}
           >
-            <span className="font-bold text-2xl text-gray-600 hover:text-indigo-700">
+            <span className="font-bold text-2xl text-gray-600 hover:text-lime-700">
               {blog.title}
             </span>
             <span className="text-gray-500 text-sm block">{blog.fileName}</span>
