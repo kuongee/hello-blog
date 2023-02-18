@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/util/posts';
+import BearInfo from './BearInfo';
 
 const BlogList = () => {
   const blogList = getAllPosts();
@@ -20,6 +21,7 @@ const BlogList = () => {
           </Link>
         ))}
       </ul>
+      <BearInfo />
     </>
   );
 };

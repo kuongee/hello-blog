@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BearButton from '@/components/BearButton';
 import './globals.css';
 
 export default function RootLayout({ children }) {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
             <Link className={`block px-3 py-2 rounded-md`} href="/about">
               ABOUT
             </Link>
+            <BearButton />
           </ul>
         </nav>
         <div className="relative left-0 md:left-1/4 top-0 h-full w-full md:w-1/2">
